@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenTelemetry.Exporter.Prometheus.HttpListener</name>
+    </assembly>
+    <members>
+        <member name="T:OpenTelemetry.Exporter.Prometheus.PrometheusExporter">
+            <summary>
+            Exporter of OpenTelemetry metrics to Prometheus.
+            </summary>
+        </member>
+        <member name="M:OpenTelemetry.Exporter.Prometheus.PrometheusExporter.#ctor(OpenTelemetry.Exporter.Prometheus.PrometheusExporterOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:OpenTelemetry.Exporter.Prometheus.PrometheusExporter"/> class.
+            </summary>
+            <param name="options"><see cref="T:OpenTelemetry.Exporter.Prometheus.PrometheusExporterOptions"/>.</param>
+        </member>
+        <member name="P:OpenTelemetry.Exporter.Prometheus.PrometheusExporter.Collect">
+            <summary>
+            Gets or sets the Collect delegate.
+            </summary>
+        </member>
+        <member name="M:OpenTelemetry.Exporter.Prometheus.PrometheusExporter.Export(OpenTelemetry.Batch{OpenTelemetry.Metrics.Metric}@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenTelemetry.Exporter.Prometheus.PrometheusExporter.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:OpenTelemetry.Exporter.Prometheus.PrometheusExporterEventSource">
+            <summary>
+            EventSource events emitted from the project.
+            </summary>
+        </member>
+        <member name="T:OpenTelemetry.Exporter.Prometheus.PrometheusExporterOptions">
+            <summary>
+            Prometheus exporter options.
+            </summary>
+        </member>
+        <member name="P:OpenTelemetry.Exporter.Prometheus.PrometheusExporterOptions.ScrapeResponseCacheDurationMilliseconds">
+            <summary>
+            Gets or sets the cache duration in milliseconds for scrape responses. Default value: 300.
+            </summary>
+            <remarks>
+            Note: Specify 0 to disable response caching.
+            </remarks>
+        </member>
+        <member name="P:OpenTelemetry.Exporter.Prometheus.PrometheusExporterOptions.DisableTotalNameSuffixForCounters">
+            <summary>
+            Gets or sets a value indicating whether addition of _total suffix for counter metric names is disabled. Default value: <see langword="false"/>.
+            </summary>
+        </member>
+        <member name="T:OpenTelemetry.Exporter.Prometheus.PrometheusSerializer">
+            <summary>
+            Basic PrometheusSerializer which has no OpenTelemetry dependency.
+            </summary>
+            <summary>
+            OpenTelemetry additions to the PrometheusSerializer.
+            </summary>
+        </member>
+        <member name="F:OpenTelemetry.Exporter.Prometheus.PrometheusType.Untyped">
+            <summary>
+            Not mapped.
+            </summary>
+        </member>
+        <member name="F:OpenTelemetry.Exporter.Prometheus.PrometheusType.Gauge">
+            <summary>
+            Mapped from Gauge and UpDownCounter.
+            </summary>
+        </member>
+        <member name="F:OpenTelemetry.Exporter.Prometheus.PrometheusType.Counter">
+            <summary>
+            Mapped from Counter.
+            </summary>
+        </member>
+        <member name="F:OpenTelemetry.Exporter.Prometheus.PrometheusType.Summary">
+            <summary>
+            Not mapped.
+            </summary>
+        </member>
+        <member name="F:OpenTelemetry.Exporter.Prometheus.PrometheusType.Histogram">
+            <summary>
+            Mapped from Histogram.
+            </summary>
+        </member>
+        <member name="M:OpenTelemetry.Exporter.PrometheusHttpListener.#ctor(OpenTelemetry.Exporter.Prometheus.PrometheusExporter,OpenTelemetry.Exporter.PrometheusHttpListenerOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:OpenTelemetry.Exporter.PrometheusHttpListener"/> class.
+            </summary>
+            <param name="exporter"><see cref="T:OpenTelemetry.Exporter.Prometheus.PrometheusExporter"/>The exporter instance.</param>
+            <param name="options"><see cref="T:OpenTelemetry.Exporter.PrometheusHttpListenerOptions"/>The configured HttpListener options.</param>
+        </member>
+        <member name="M:OpenTelemetry.Exporter.PrometheusHttpListener.Start(System.Threading.CancellationToken)">
+            <summary>
+            Start the HttpListener.
+            </summary>
+            <param name="token">An optional <see cref="T:System.Threading.CancellationToken"/> that can be used to stop the HTTP listener.</param>
+        </member>
+        <member name="M:OpenTelemetry.Exporter.PrometheusHttpListener.Stop">
+            <summary>
+            Gracefully stop the PrometheusHttpListener.
+            </summary>
+        </member>
+        <member name="M:OpenTelemetry.Exporter.PrometheusHttpListener.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:OpenTelemetry.Exporter.PrometheusHttpListenerOptions">
+            <summary>
+            <see cref="T:OpenTelemetry.Exporter.PrometheusHttpListener"/> options.
+            </summary>
+        </member>
+        <member name="P:OpenTelemetry.Exporter.PrometheusHttpListenerOptions.ScrapeEndpointPath">
+            <summary>
+            Gets or sets the path to use for the scraping endpoint. Default value: "/metrics".
+            </summary>
+        </member>
+        <member name="P:OpenTelemetry.Exporter.PrometheusHttpListenerOptions.DisableTotalNameSuffixForCounters">
+            <summary>
+            Gets or sets a value indicating whether addition of _total suffix for counter metric names is disabled. Default value: <see langword="false"/>.
+            </summary>
+        </member>
+        <member name="P:OpenTelemetry.Exporter.PrometheusHttpListenerOptions.UriPrefixes">
+            <summary>
+            Gets or sets the URI (Uniform Resource Identifier) prefixes to use for the http listener.
+            Default value: <c>["http://localhost:9464/"]</c>.
+            </summary>
+        </member>
+        <member name="T:OpenTelemetry.Metrics.PrometheusHttpListenerMeterProviderBuilderExtensions">
+            <summary>
+            Extension methods to simplify registering a PrometheusHttpListener.
+            </summary>
+        </member>
+        <member name="M:OpenTelemetry.Metrics.PrometheusHttpListenerMeterProviderBuilderExtensions.AddPrometheusHttpListener(OpenTelemetry.Metrics.MeterProviderBuilder)">
+            <summary>
+            Adds PrometheusHttpListener to MeterProviderBuilder.
+            </summary>
+            <param name="builder"><see cref="T:OpenTelemetry.Metrics.MeterProviderBuilder"/>builder to use.</param>
+            <returns>The instance of <see cref="T:OpenTelemetry.Metrics.MeterProviderBuilder"/>to chain calls.</returns>
+        </member>
+        <member name="M:OpenTelemetry.Metrics.PrometheusHttpListenerMeterProviderBuilderExtensions.AddPrometheusHttpListener(OpenTelemetry.Metrics.MeterProviderBuilder,System.Action{OpenTelemetry.Exporter.PrometheusHttpListenerOptions})">
+            <summary>
+            Adds PrometheusHttpListener to MeterProviderBuilder.
+            </summary>
+            <param name="builder"><see cref="T:OpenTelemetry.Metrics.MeterProviderBuilder"/>builder to use.</param>
+            <param name="configure">Callback action for configuring <see cref="T:OpenTelemetry.Exporter.PrometheusHttpListenerOptions"/>.</param>
+            <returns>The instance of <see cref="T:OpenTelemetry.Metrics.MeterProviderBuilder"/>to chain calls.</returns>
+        </member>
+        <member name="M:OpenTelemetry.Metrics.PrometheusHttpListenerMeterProviderBuilderExtensions.AddPrometheusHttpListener(OpenTelemetry.Metrics.MeterProviderBuilder,System.String,System.Action{OpenTelemetry.Exporter.PrometheusHttpListenerOptions})">
+            <summary>
+            Adds PrometheusHttpListener to MeterProviderBuilder.
+            </summary>
+            <param name="builder"><see cref="T:OpenTelemetry.Metrics.MeterProviderBuilder"/>builder to use.</param>
+            <param name="name">Name which is used when retrieving options.</param>
+            <param name="configure">Callback action for configuring <see cref="T:OpenTelemetry.Exporter.PrometheusHttpListenerOptions"/>.</param>
+            <returns>The instance of <see cref="T:OpenTelemetry.Metrics.MeterProviderBuilder"/>to chain calls.</returns>
+        </member>
+        <member name="T:OpenTelemetry.Internal.Guard">
+            <summary>
+            Methods for guarding against exception throwing values.
+            </summary>
+        </member>
+        <member name="M:OpenTelemetry.Internal.Guard.ThrowIfNull(System.Object,System.String)">
+            <summary>
+            Throw an exception if the value is null.
+            </summary>
+            <param name="value">The value to check.</param>
+            <param name="paramName">The parameter name to use in the thrown exception.</param>
+        </member>
+        <member name="M:OpenTelemetry.Internal.Guard.ThrowIfNullOrEmpty(System.String,System.String)">
+            <summary>
+            Throw an exception if the value is null or empty.
+            </summary>
+            <param name="value">The value to check.</param>
+            <param name="paramName">The parameter name to use in the thrown exception.</param>
+        </member>
+        <member name="M:OpenTelemetry.Internal.Guard.ThrowIfNullOrWhitespace(System.String,System.String)">
+            <summary>
+            Throw an exception if the value is null or whitespace.
+            </summary>
+            <param name="value">The value to check.</param>
+            <param name="paramName">The parameter name to use in the thrown exception.</param>
+        </member>
+        <member name="M:OpenTelemetry.Internal.Guard.ThrowIfZero(System.Int32,System.String,System.String)">
+            <summary>
+            Throw an exception if the value is zero.
+            </summary>
+            <param name="value">The value to check.</param>
+            <param name="message">The message to use in the thrown exception.</param>
+            <param name="paramName">The parameter name to use in the thrown exception.</param>
+        </member>
+        <member name="M:OpenTelemetry.Internal.Guard.ThrowIfInvalidTimeout(System.Int32,System.String)">
+            <summary>
+            Throw an exception if the value is not considered a valid timeout.
+            </summary>
+            <param name="value">The value to check.</param>
+            <param name="paramName">The parameter name to use in the thrown exception.</param>
+        </member>
+        <member name="M:OpenTelemetry.Internal.Guard.ThrowIfOutOfRange(System.Int32,System.String,System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Throw an exception if the value is not within the given range.
+            </summary>
+            <param name="value">The value to check.</param>
+            <param name="paramName">The parameter name to use in the thrown exception.</param>
+            <param name="min">The inclusive lower bound.</param>
+            <param name="max">The inclusive upper bound.</param>
+            <param name="minName">The name of the lower bound.</param>
+            <param name="maxName">The name of the upper bound.</param>
+            <param name="message">An optional custom message to use in the thrown exception.</param>
+        </member>
+        <member name="M:OpenTelemetry.Internal.Guard.ThrowIfOutOfRange(System.Double,System.String,System.Double,System.Double,System.String,System.String,System.String)">
+            <summary>
+            Throw an exception if the value is not within the given range.
+            </summary>
+            <param name="value">The value to check.</param>
+            <param name="paramName">The parameter name to use in the thrown exception.</param>
+            <param name="min">The inclusive lower bound.</param>
+            <param name="max">The inclusive upper bound.</param>
+            <param name="minName">The name of the lower bound.</param>
+            <param name="maxName">The name of the upper bound.</param>
+            <param name="message">An optional custom message to use in the thrown exception.</param>
+        </member>
+        <member name="M:OpenTelemetry.Internal.Guard.ThrowIfNotOfType``1(System.Object,System.String)">
+            <summary>
+            Throw an exception if the value is not of the expected type.
+            </summary>
+            <param name="value">The value to check.</param>
+            <param name="paramName">The parameter name to use in the thrown exception.</param>
+            <typeparam name="T">The type attempted to convert to.</typeparam>
+            <returns>The value casted to the specified type.</returns>
+        </member>
+        <member name="M:OpenTelemetry.Internal.ExceptionExtensions.ToInvariantString(System.Exception)">
+            <summary>
+            Returns a culture-independent string representation of the given <paramref name="exception"/> object,
+            appropriate for diagnostics tracing.
+            </summary>
+            <param name="exception">Exception to convert to string.</param>
+            <returns>Exception as string with no culture.</returns>
+        </member>
+    </members>
+</doc>

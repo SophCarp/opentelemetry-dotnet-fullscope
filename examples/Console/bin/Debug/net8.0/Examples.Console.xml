@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Examples.Console</name>
+    </assembly>
+    <members>
+        <member name="T:Examples.Console.Program">
+            <summary>
+            Main samples entry point.
+            </summary>
+        </member>
+        <member name="M:Examples.Console.Program.Main(System.String[])">
+             <summary>
+             Main method - invoke this using command line.
+             For example:
+            
+             dotnet run --project Examples.Console.csproj -- console
+             dotnet run --project Examples.Console.csproj -- inmemory
+             dotnet run --project Examples.Console.csproj -- zipkin -u http://localhost:9411/api/v2/spans
+             dotnet run --project Examples.Console.csproj -- prometheus -p 9464
+             dotnet run --project Examples.Console.csproj -- otlp -e "http://localhost:4317" -p "grpc"
+             dotnet run --project Examples.Console.csproj -- metrics --help
+            
+             To see all available examples in the project run:
+            
+             dotnet run --project Examples.Console.csproj -- --help
+            
+             The above must be run from the project root folder
+             (eg: C:\repos\opentelemetry-dotnet\examples\Console\).
+             </summary>
+             <param name="args">Arguments from command line.</param>
+        </member>
+        <member name="T:Examples.Console.TestConsoleExporter.MyProcessor">
+            <summary>
+            An example of custom processor which
+            can be used to add more tags to an activity.
+            </summary>
+        </member>
+        <member name="T:Examples.GrpcService.GreetReflection">
+            <summary>Holder for reflection information generated from greet.proto</summary>
+        </member>
+        <member name="P:Examples.GrpcService.GreetReflection.Descriptor">
+            <summary>File descriptor for greet.proto</summary>
+        </member>
+        <member name="T:Examples.GrpcService.HelloRequest">
+            <summary>
+            The request message containing the user's name.
+            </summary>
+        </member>
+        <member name="F:Examples.GrpcService.HelloRequest.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="T:Examples.GrpcService.HelloReply">
+            <summary>
+            The response message containing the greetings.
+            </summary>
+        </member>
+        <member name="F:Examples.GrpcService.HelloReply.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="T:Examples.GrpcService.Greeter">
+            <summary>
+            The greeting service definition.
+            </summary>
+        </member>
+        <member name="P:Examples.GrpcService.Greeter.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:Examples.GrpcService.Greeter.GreeterClient">
+            <summary>Client for Greeter</summary>
+        </member>
+        <member name="M:Examples.GrpcService.Greeter.GreeterClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for Greeter</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:Examples.GrpcService.Greeter.GreeterClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for Greeter that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:Examples.GrpcService.Greeter.GreeterClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:Examples.GrpcService.Greeter.GreeterClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:Examples.GrpcService.Greeter.GreeterClient.SayHello(Examples.GrpcService.HelloRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            Sends a greeting
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:Examples.GrpcService.Greeter.GreeterClient.SayHello(Examples.GrpcService.HelloRequest,Grpc.Core.CallOptions)">
+            <summary>
+            Sends a greeting
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:Examples.GrpcService.Greeter.GreeterClient.SayHelloAsync(Examples.GrpcService.HelloRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            Sends a greeting
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:Examples.GrpcService.Greeter.GreeterClient.SayHelloAsync(Examples.GrpcService.HelloRequest,Grpc.Core.CallOptions)">
+            <summary>
+            Sends a greeting
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:Examples.GrpcService.Greeter.GreeterClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="T:OpenTelemetry.Trace.SpanAttributeConstants">
+            <summary>
+            Defines well-known span attribute keys.
+            </summary>
+        </member>
+    </members>
+</doc>

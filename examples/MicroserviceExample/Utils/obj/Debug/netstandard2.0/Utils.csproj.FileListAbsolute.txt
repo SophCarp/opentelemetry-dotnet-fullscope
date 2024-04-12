@@ -1,0 +1,17 @@
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\bin\Debug\netstandard2.0\Utils.deps.json
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\bin\Debug\netstandard2.0\Utils.dll
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\bin\Debug\netstandard2.0\Utils.pdb
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\bin\Debug\netstandard2.0\Utils.xml
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\bin\Debug\netstandard2.0\OpenTelemetry.Api.dll
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\bin\Debug\netstandard2.0\OpenTelemetry.Api.pdb
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\bin\Debug\netstandard2.0\OpenTelemetry.Api.xml
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\obj\Debug\netstandard2.0\Utils.csproj.AssemblyReference.cache
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\obj\Debug\netstandard2.0\Utils.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\obj\Debug\netstandard2.0\Utils.AssemblyInfoInputs.cache
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\obj\Debug\netstandard2.0\Utils.AssemblyInfo.cs
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\obj\Debug\netstandard2.0\Utils.csproj.CoreCompileInputs.cache
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\obj\Debug\netstandard2.0\Utils.sourcelink.json
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\obj\Debug\netstandard2.0\Utils.csproj.Up2Date
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\obj\Debug\netstandard2.0\Utils.dll
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\obj\Debug\netstandard2.0\Utils.xml
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\MicroserviceExample\Utils\obj\Debug\netstandard2.0\Utils.pdb

@@ -1,0 +1,8 @@
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\AspNetCore\obj\Debug\net8.0\Examples.AspNetCore.csproj.AssemblyReference.cache
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\AspNetCore\obj\Debug\net8.0\Examples.AspNetCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\AspNetCore\obj\Debug\net8.0\Examples.AspNetCore.AssemblyInfoInputs.cache
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\AspNetCore\obj\Debug\net8.0\Examples.AspNetCore.AssemblyInfo.cs
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\AspNetCore\obj\Debug\net8.0\Examples.AspNetCore.csproj.CoreCompileInputs.cache
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\AspNetCore\obj\Debug\net8.0\Examples.AspNetCore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\AspNetCore\obj\Debug\net8.0\Examples.AspNetCore.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\socarpenter\testing\2024-otel-blank-source\opentelemetry-dotnet-fullscope\examples\AspNetCore\obj\Debug\net8.0\Examples.AspNetCore.sourcelink.json
