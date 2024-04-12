@@ -5,8 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" />
-    <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" />
+    <!-- <PackageReference Include="Swashbuckle.AspNetCore" /> -->
+    <!-- <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" /> -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.5.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,7 +31,7 @@
     <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.5.1" />
     <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.5.1-beta.1" />
     <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.5.1-beta.1" />
-    <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.5.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+   
+   
   </ItemGroup>
 </Project>
