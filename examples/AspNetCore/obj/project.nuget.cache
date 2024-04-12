@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oUl5YxdX5jEF+wCthI29j8AtNItZzZ+zClyBCzQRMWOpVfvRQYteqJJneX7T04pSjmkTAGuMSG5gPbY3DrK+iw==",
+  "dgSpecHash": "D2M/AQZC+8fPigfWuvGsfgQ1Rxbp+RCPJKH4HGYAExnRDUpczSd4pUeLLyqYghD1ER05O8rR6cay6wuG8ntGCw==",
   "success": true,
   "projectFilePath": "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\examples\\AspNetCore\\Examples.AspNetCore.csproj",
   "expectedPackageFiles": [
