@@ -19,7 +19,7 @@ public class Instrumentation : IDisposable
 
     public Instrumentation()
     {
-        string? version = typeof(Instrumentation).Assembly.GetName().Version?.ToString();
+        string version = typeof(Instrumentation).Assembly.GetName().Version?.ToString();
         this.ActivitySource = new ActivitySource(ActivitySourceName, version);
         this.meter = new Meter(MeterName, version);
         this.FreezingDaysCounter = this.meter.CreateCounter<long>("weather.days.freezing", description: "The number of days where the temperature is below freezing");
