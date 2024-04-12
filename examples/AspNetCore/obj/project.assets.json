@@ -114,7 +114,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Binder/8.0.1": {
+      "Microsoft.Extensions.Configuration.Binder/8.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0"
@@ -356,18 +356,6 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.NETFramework.ReferenceAssemblies/1.0.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETFramework.ReferenceAssemblies.net461": "1.0.3"
-        }
-      },
-      "Microsoft.NETFramework.ReferenceAssemblies.net461/1.0.3": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.NETFramework.ReferenceAssemblies.net461.targets": {}
-        }
-      },
       "Microsoft.OpenApi/1.2.3": {
         "type": "package",
         "compile": {
@@ -381,10 +369,221 @@
           }
         }
       },
-      "OpenTelemetry.Instrumentation.Runtime/1.5.1": {
+      "OpenTelemetry/1.8.0": {
         "type": "package",
         "dependencies": {
-          "OpenTelemetry.Api": "[1.5.1, 2.0.0)"
+          "Microsoft.Extensions.Diagnostics.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "8.0.0",
+          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.8.0"
+        },
+        "compile": {
+          "lib/net8.0/OpenTelemetry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/OpenTelemetry.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTelemetry.Api/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/OpenTelemetry.Api.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/OpenTelemetry.Api.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTelemetry.Api.ProviderBuilderExtensions/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "OpenTelemetry.Api": "1.8.0"
+        },
+        "compile": {
+          "lib/net8.0/OpenTelemetry.Api.ProviderBuilderExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/OpenTelemetry.Api.ProviderBuilderExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTelemetry.Exporter.Console/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "OpenTelemetry": "1.8.0",
+          "System.Text.Encodings.Web": "4.7.2",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "lib/net8.0/OpenTelemetry.Exporter.Console.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/OpenTelemetry.Exporter.Console.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTelemetry.Exporter.Jaeger/1.6.0-rc.1": {
+        "type": "package",
+        "dependencies": {
+          "OpenTelemetry": "1.6.0-rc.1",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/net6.0/OpenTelemetry.Exporter.Jaeger.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/OpenTelemetry.Exporter.Jaeger.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTelemetry.Exporter.OpenTelemetryProtocol/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "[3.22.5, 4.0.0)",
+          "Grpc.Net.Client": "[2.52.0, 3.0.0)",
+          "OpenTelemetry": "1.8.0"
+        },
+        "compile": {
+          "lib/net8.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs/1.5.0-rc.1": {
+        "type": "package",
+        "dependencies": {
+          "OpenTelemetry": "1.5.0-rc.1",
+          "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.5.0-rc.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTelemetry.Exporter.Prometheus.AspNetCore/1.8.0-rc.1": {
+        "type": "package",
+        "dependencies": {
+          "OpenTelemetry": "1.8.0-rc.1"
+        },
+        "compile": {
+          "lib/net8.0/OpenTelemetry.Exporter.Prometheus.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/OpenTelemetry.Exporter.Prometheus.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "OpenTelemetry.Exporter.Zipkin/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "OpenTelemetry": "1.8.0",
+          "System.Text.Encodings.Web": "4.7.2",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "lib/net8.0/OpenTelemetry.Exporter.Zipkin.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/OpenTelemetry.Exporter.Zipkin.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTelemetry.Extensions.Hosting/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Hosting.Abstractions": "8.0.0",
+          "OpenTelemetry": "1.8.0"
+        },
+        "compile": {
+          "lib/net8.0/OpenTelemetry.Extensions.Hosting.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/OpenTelemetry.Extensions.Hosting.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTelemetry.Instrumentation.AspNetCore/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.8.0"
+        },
+        "compile": {
+          "lib/net8.0/OpenTelemetry.Instrumentation.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/OpenTelemetry.Instrumentation.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "OpenTelemetry.Instrumentation.Http/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Options": "8.0.0",
+          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.8.0"
+        },
+        "compile": {
+          "lib/net8.0/OpenTelemetry.Instrumentation.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/OpenTelemetry.Instrumentation.Http.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTelemetry.Instrumentation.Runtime/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "OpenTelemetry.Api": "[1.5.0, 2.0.0)"
         },
         "compile": {
           "lib/net6.0/OpenTelemetry.Instrumentation.Runtime.dll": {
@@ -396,15 +595,6 @@
             "related": ".xml"
           }
         }
-      },
-      "StyleCop.Analyzers/1.2.0-beta.556": {
-        "type": "package",
-        "dependencies": {
-          "StyleCop.Analyzers.Unstable": "1.2.0.556"
-        }
-      },
-      "StyleCop.Analyzers.Unstable/1.2.0.556": {
-        "type": "package"
       },
       "Swashbuckle.AspNetCore/6.5.0": {
         "type": "package",
@@ -520,153 +710,13 @@
           }
         }
       },
-      "OpenTelemetry/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.Extensions.Diagnostics.Abstractions": "8.0.0",
-          "Microsoft.Extensions.Logging.Configuration": "8.0.0",
-          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.0.0"
-        },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
         "compile": {
-          "bin/placeholder/OpenTelemetry.dll": {}
+          "ref/netcoreapp2.1/_._": {}
         },
         "runtime": {
-          "bin/placeholder/OpenTelemetry.dll": {}
-        }
-      },
-      "OpenTelemetry.Api/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "System.Diagnostics.DiagnosticSource": "8.0.0"
-        },
-        "compile": {
-          "bin/placeholder/OpenTelemetry.Api.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OpenTelemetry.Api.dll": {}
-        }
-      },
-      "OpenTelemetry.Api.ProviderBuilderExtensions/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
-          "OpenTelemetry.Api": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/OpenTelemetry.Api.ProviderBuilderExtensions.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OpenTelemetry.Api.ProviderBuilderExtensions.dll": {}
-        }
-      },
-      "OpenTelemetry.Exporter.Console/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "OpenTelemetry": "1.0.0",
-          "System.Text.Encodings.Web": "4.7.2",
-          "System.Text.Json": "4.7.2"
-        },
-        "compile": {
-          "bin/placeholder/OpenTelemetry.Exporter.Console.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OpenTelemetry.Exporter.Console.dll": {}
-        }
-      },
-      "OpenTelemetry.Exporter.OpenTelemetryProtocol/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Google.Protobuf": "[3.22.5, 4.0.0)",
-          "Grpc.Net.Client": "[2.52.0, 3.0.0)",
-          "Microsoft.Extensions.Configuration.Binder": "8.0.1",
-          "OpenTelemetry": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/OpenTelemetry.Exporter.OpenTelemetryProtocol.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OpenTelemetry.Exporter.OpenTelemetryProtocol.dll": {}
-        }
-      },
-      "OpenTelemetry.Exporter.Prometheus.AspNetCore/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "OpenTelemetry": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/OpenTelemetry.Exporter.Prometheus.AspNetCore.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OpenTelemetry.Exporter.Prometheus.AspNetCore.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "OpenTelemetry.Exporter.Zipkin/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "OpenTelemetry": "1.0.0",
-          "System.Text.Encodings.Web": "4.7.2",
-          "System.Text.Json": "4.7.2"
-        },
-        "compile": {
-          "bin/placeholder/OpenTelemetry.Exporter.Zipkin.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OpenTelemetry.Exporter.Zipkin.dll": {}
-        }
-      },
-      "OpenTelemetry.Extensions.Hosting/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.Extensions.Hosting.Abstractions": "8.0.0",
-          "OpenTelemetry": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/OpenTelemetry.Extensions.Hosting.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OpenTelemetry.Extensions.Hosting.dll": {}
-        }
-      },
-      "OpenTelemetry.Instrumentation.AspNetCore/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/OpenTelemetry.Instrumentation.AspNetCore.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OpenTelemetry.Instrumentation.AspNetCore.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "OpenTelemetry.Instrumentation.Http/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration": "8.0.0",
-          "Microsoft.Extensions.Options": "8.0.0",
-          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/OpenTelemetry.Instrumentation.Http.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OpenTelemetry.Instrumentation.Http.dll": {}
+          "lib/netcoreapp2.1/_._": {}
         }
       }
     }
@@ -1066,10 +1116,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Configuration.Binder/8.0.1": {
-      "sha512": "2UKFJnLiBt7Od6nCnTqP9rTIUNhzmn9Hv1l2FchyKbz8xieB9ULwZTbQZMw+M24Qw3F5dzzH1U9PPleN0LNLOQ==",
+    "Microsoft.Extensions.Configuration.Binder/8.0.0": {
+      "sha512": "mBMoXLsr5s1y2zOHWmKsE9veDcx8h1x/c3rz4baEdQKTeDcmQAPNbB54Pi/lhFO3K431eEq6PFbMgLaa6PHFfA==",
       "type": "package",
-      "path": "microsoft.extensions.configuration.binder/8.0.1",
+      "path": "microsoft.extensions.configuration.binder/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1102,7 +1152,7 @@
         "lib/net8.0/Microsoft.Extensions.Configuration.Binder.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
-        "microsoft.extensions.configuration.binder.8.0.1.nupkg.sha512",
+        "microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
         "microsoft.extensions.configuration.binder.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -1501,345 +1551,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.NETFramework.ReferenceAssemblies/1.0.3": {
-      "sha512": "vUc9Npcs14QsyOD01tnv/m8sQUnGTGOw1BCmKcv77LBJY7OxhJ+zJF7UD/sCL3lYNFuqmQEVlkfS4Quif6FyYg==",
-      "type": "package",
-      "path": "microsoft.netframework.referenceassemblies/1.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
-        "microsoft.netframework.referenceassemblies.nuspec"
-      ]
-    },
-    "Microsoft.NETFramework.ReferenceAssemblies.net461/1.0.3": {
-      "sha512": "AmOJZwCqnOCNp6PPcf9joyogScWLtwy0M1WkqfEQ0M9nYwyDD7EX9ZjscKS5iYnyvteX7kzSKFCKt9I9dXA6mA==",
-      "type": "package",
-      "path": "microsoft.netframework.referenceassemblies.net461/1.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/.NETFramework/v4.6.1/Accessibility.dll",
-        "build/.NETFramework/v4.6.1/Accessibility.xml",
-        "build/.NETFramework/v4.6.1/CustomMarshalers.dll",
-        "build/.NETFramework/v4.6.1/CustomMarshalers.xml",
-        "build/.NETFramework/v4.6.1/Facades/System.Collections.Concurrent.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Collections.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.ComponentModel.Annotations.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.ComponentModel.EventBasedAsync.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.ComponentModel.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Diagnostics.Contracts.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Diagnostics.Debug.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Diagnostics.Tools.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Diagnostics.Tracing.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Dynamic.Runtime.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Globalization.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.IO.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Linq.Expressions.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Linq.Parallel.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Linq.Queryable.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Linq.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Net.NetworkInformation.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Net.Primitives.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Net.Requests.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Net.WebHeaderCollection.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.ObjectModel.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Reflection.Emit.ILGeneration.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Reflection.Emit.Lightweight.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Reflection.Emit.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Reflection.Extensions.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Reflection.Primitives.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Reflection.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Resources.ResourceManager.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Runtime.Extensions.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Runtime.Handles.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Runtime.InteropServices.WindowsRuntime.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Runtime.InteropServices.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Runtime.Numerics.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Runtime.Serialization.Json.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Runtime.Serialization.Primitives.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Runtime.Serialization.Xml.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Runtime.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Security.Principal.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.ServiceModel.Duplex.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.ServiceModel.Http.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.ServiceModel.NetTcp.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.ServiceModel.Primitives.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.ServiceModel.Security.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Text.Encoding.Extensions.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Text.Encoding.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Text.RegularExpressions.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Threading.Tasks.Parallel.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Threading.Tasks.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Threading.Timer.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Threading.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Xml.ReaderWriter.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Xml.XDocument.dll",
-        "build/.NETFramework/v4.6.1/Facades/System.Xml.XmlSerializer.dll",
-        "build/.NETFramework/v4.6.1/ISymWrapper.dll",
-        "build/.NETFramework/v4.6.1/ISymWrapper.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.Activities.Build.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.Activities.Build.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.Build.Conversion.v4.0.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.Build.Conversion.v4.0.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.Build.Engine.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.Build.Engine.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.Build.Framework.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.Build.Framework.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.Build.Tasks.v4.0.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.Build.Tasks.v4.0.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.Build.Utilities.v4.0.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.Build.Utilities.v4.0.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.Build.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.Build.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.CSharp.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.CSharp.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.JScript.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.JScript.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.VisualBasic.Compatibility.Data.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.VisualBasic.Compatibility.Data.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.VisualBasic.Compatibility.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.VisualBasic.Compatibility.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.VisualBasic.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.VisualBasic.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.VisualC.STLCLR.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.VisualC.STLCLR.xml",
-        "build/.NETFramework/v4.6.1/Microsoft.VisualC.dll",
-        "build/.NETFramework/v4.6.1/Microsoft.VisualC.xml",
-        "build/.NETFramework/v4.6.1/PermissionSets/FullTrust.xml",
-        "build/.NETFramework/v4.6.1/PermissionSets/Internet.xml",
-        "build/.NETFramework/v4.6.1/PermissionSets/LocalIntranet.xml",
-        "build/.NETFramework/v4.6.1/PresentationBuildTasks.dll",
-        "build/.NETFramework/v4.6.1/PresentationBuildTasks.xml",
-        "build/.NETFramework/v4.6.1/PresentationCore.dll",
-        "build/.NETFramework/v4.6.1/PresentationCore.xml",
-        "build/.NETFramework/v4.6.1/PresentationFramework.Aero.dll",
-        "build/.NETFramework/v4.6.1/PresentationFramework.Aero.xml",
-        "build/.NETFramework/v4.6.1/PresentationFramework.Aero2.dll",
-        "build/.NETFramework/v4.6.1/PresentationFramework.Aero2.xml",
-        "build/.NETFramework/v4.6.1/PresentationFramework.AeroLite.dll",
-        "build/.NETFramework/v4.6.1/PresentationFramework.AeroLite.xml",
-        "build/.NETFramework/v4.6.1/PresentationFramework.Classic.dll",
-        "build/.NETFramework/v4.6.1/PresentationFramework.Classic.xml",
-        "build/.NETFramework/v4.6.1/PresentationFramework.Luna.dll",
-        "build/.NETFramework/v4.6.1/PresentationFramework.Luna.xml",
-        "build/.NETFramework/v4.6.1/PresentationFramework.Royale.dll",
-        "build/.NETFramework/v4.6.1/PresentationFramework.Royale.xml",
-        "build/.NETFramework/v4.6.1/PresentationFramework.dll",
-        "build/.NETFramework/v4.6.1/PresentationFramework.xml",
-        "build/.NETFramework/v4.6.1/ReachFramework.dll",
-        "build/.NETFramework/v4.6.1/ReachFramework.xml",
-        "build/.NETFramework/v4.6.1/RedistList/FrameworkList.xml",
-        "build/.NETFramework/v4.6.1/System.Activities.Core.Presentation.dll",
-        "build/.NETFramework/v4.6.1/System.Activities.Core.Presentation.xml",
-        "build/.NETFramework/v4.6.1/System.Activities.DurableInstancing.dll",
-        "build/.NETFramework/v4.6.1/System.Activities.DurableInstancing.xml",
-        "build/.NETFramework/v4.6.1/System.Activities.Presentation.dll",
-        "build/.NETFramework/v4.6.1/System.Activities.Presentation.xml",
-        "build/.NETFramework/v4.6.1/System.Activities.dll",
-        "build/.NETFramework/v4.6.1/System.Activities.xml",
-        "build/.NETFramework/v4.6.1/System.AddIn.Contract.dll",
-        "build/.NETFramework/v4.6.1/System.AddIn.Contract.xml",
-        "build/.NETFramework/v4.6.1/System.AddIn.dll",
-        "build/.NETFramework/v4.6.1/System.AddIn.xml",
-        "build/.NETFramework/v4.6.1/System.ComponentModel.Composition.Registration.dll",
-        "build/.NETFramework/v4.6.1/System.ComponentModel.Composition.Registration.xml",
-        "build/.NETFramework/v4.6.1/System.ComponentModel.Composition.dll",
-        "build/.NETFramework/v4.6.1/System.ComponentModel.Composition.xml",
-        "build/.NETFramework/v4.6.1/System.ComponentModel.DataAnnotations.dll",
-        "build/.NETFramework/v4.6.1/System.ComponentModel.DataAnnotations.xml",
-        "build/.NETFramework/v4.6.1/System.Configuration.Install.dll",
-        "build/.NETFramework/v4.6.1/System.Configuration.Install.xml",
-        "build/.NETFramework/v4.6.1/System.Configuration.dll",
-        "build/.NETFramework/v4.6.1/System.Configuration.xml",
-        "build/.NETFramework/v4.6.1/System.Core.dll",
-        "build/.NETFramework/v4.6.1/System.Core.xml",
-        "build/.NETFramework/v4.6.1/System.Data.DataSetExtensions.dll",
-        "build/.NETFramework/v4.6.1/System.Data.DataSetExtensions.xml",
-        "build/.NETFramework/v4.6.1/System.Data.Entity.Design.dll",
-        "build/.NETFramework/v4.6.1/System.Data.Entity.Design.xml",
-        "build/.NETFramework/v4.6.1/System.Data.Entity.dll",
-        "build/.NETFramework/v4.6.1/System.Data.Entity.xml",
-        "build/.NETFramework/v4.6.1/System.Data.Linq.dll",
-        "build/.NETFramework/v4.6.1/System.Data.Linq.xml",
-        "build/.NETFramework/v4.6.1/System.Data.OracleClient.dll",
-        "build/.NETFramework/v4.6.1/System.Data.OracleClient.xml",
-        "build/.NETFramework/v4.6.1/System.Data.Services.Client.dll",
-        "build/.NETFramework/v4.6.1/System.Data.Services.Client.xml",
-        "build/.NETFramework/v4.6.1/System.Data.Services.Design.dll",
-        "build/.NETFramework/v4.6.1/System.Data.Services.Design.xml",
-        "build/.NETFramework/v4.6.1/System.Data.Services.dll",
-        "build/.NETFramework/v4.6.1/System.Data.Services.xml",
-        "build/.NETFramework/v4.6.1/System.Data.SqlXml.dll",
-        "build/.NETFramework/v4.6.1/System.Data.SqlXml.xml",
-        "build/.NETFramework/v4.6.1/System.Data.dll",
-        "build/.NETFramework/v4.6.1/System.Data.xml",
-        "build/.NETFramework/v4.6.1/System.Deployment.dll",
-        "build/.NETFramework/v4.6.1/System.Deployment.xml",
-        "build/.NETFramework/v4.6.1/System.Design.dll",
-        "build/.NETFramework/v4.6.1/System.Design.xml",
-        "build/.NETFramework/v4.6.1/System.Device.dll",
-        "build/.NETFramework/v4.6.1/System.Device.xml",
-        "build/.NETFramework/v4.6.1/System.DirectoryServices.AccountManagement.dll",
-        "build/.NETFramework/v4.6.1/System.DirectoryServices.AccountManagement.xml",
-        "build/.NETFramework/v4.6.1/System.DirectoryServices.Protocols.dll",
-        "build/.NETFramework/v4.6.1/System.DirectoryServices.Protocols.xml",
-        "build/.NETFramework/v4.6.1/System.DirectoryServices.dll",
-        "build/.NETFramework/v4.6.1/System.DirectoryServices.xml",
-        "build/.NETFramework/v4.6.1/System.Drawing.Design.dll",
-        "build/.NETFramework/v4.6.1/System.Drawing.Design.xml",
-        "build/.NETFramework/v4.6.1/System.Drawing.dll",
-        "build/.NETFramework/v4.6.1/System.Drawing.xml",
-        "build/.NETFramework/v4.6.1/System.Dynamic.dll",
-        "build/.NETFramework/v4.6.1/System.EnterpriseServices.Thunk.dll",
-        "build/.NETFramework/v4.6.1/System.EnterpriseServices.Wrapper.dll",
-        "build/.NETFramework/v4.6.1/System.EnterpriseServices.dll",
-        "build/.NETFramework/v4.6.1/System.EnterpriseServices.xml",
-        "build/.NETFramework/v4.6.1/System.IO.Compression.FileSystem.dll",
-        "build/.NETFramework/v4.6.1/System.IO.Compression.FileSystem.xml",
-        "build/.NETFramework/v4.6.1/System.IO.Compression.dll",
-        "build/.NETFramework/v4.6.1/System.IO.Compression.xml",
-        "build/.NETFramework/v4.6.1/System.IO.Log.dll",
-        "build/.NETFramework/v4.6.1/System.IO.Log.xml",
-        "build/.NETFramework/v4.6.1/System.IdentityModel.Selectors.dll",
-        "build/.NETFramework/v4.6.1/System.IdentityModel.Selectors.xml",
-        "build/.NETFramework/v4.6.1/System.IdentityModel.Services.dll",
-        "build/.NETFramework/v4.6.1/System.IdentityModel.Services.xml",
-        "build/.NETFramework/v4.6.1/System.IdentityModel.dll",
-        "build/.NETFramework/v4.6.1/System.IdentityModel.xml",
-        "build/.NETFramework/v4.6.1/System.Linq.xml",
-        "build/.NETFramework/v4.6.1/System.Management.Instrumentation.dll",
-        "build/.NETFramework/v4.6.1/System.Management.Instrumentation.xml",
-        "build/.NETFramework/v4.6.1/System.Management.dll",
-        "build/.NETFramework/v4.6.1/System.Management.xml",
-        "build/.NETFramework/v4.6.1/System.Messaging.dll",
-        "build/.NETFramework/v4.6.1/System.Messaging.xml",
-        "build/.NETFramework/v4.6.1/System.Net.Http.WebRequest.dll",
-        "build/.NETFramework/v4.6.1/System.Net.Http.WebRequest.xml",
-        "build/.NETFramework/v4.6.1/System.Net.Http.dll",
-        "build/.NETFramework/v4.6.1/System.Net.Http.xml",
-        "build/.NETFramework/v4.6.1/System.Net.dll",
-        "build/.NETFramework/v4.6.1/System.Net.xml",
-        "build/.NETFramework/v4.6.1/System.Numerics.Vectors.dll",
-        "build/.NETFramework/v4.6.1/System.Numerics.dll",
-        "build/.NETFramework/v4.6.1/System.Numerics.xml",
-        "build/.NETFramework/v4.6.1/System.Printing.dll",
-        "build/.NETFramework/v4.6.1/System.Printing.xml",
-        "build/.NETFramework/v4.6.1/System.Reflection.Context.dll",
-        "build/.NETFramework/v4.6.1/System.Reflection.Context.xml",
-        "build/.NETFramework/v4.6.1/System.Runtime.Caching.dll",
-        "build/.NETFramework/v4.6.1/System.Runtime.Caching.xml",
-        "build/.NETFramework/v4.6.1/System.Runtime.DurableInstancing.dll",
-        "build/.NETFramework/v4.6.1/System.Runtime.DurableInstancing.xml",
-        "build/.NETFramework/v4.6.1/System.Runtime.Remoting.dll",
-        "build/.NETFramework/v4.6.1/System.Runtime.Remoting.xml",
-        "build/.NETFramework/v4.6.1/System.Runtime.Serialization.Formatters.Soap.dll",
-        "build/.NETFramework/v4.6.1/System.Runtime.Serialization.Formatters.Soap.xml",
-        "build/.NETFramework/v4.6.1/System.Runtime.Serialization.dll",
-        "build/.NETFramework/v4.6.1/System.Runtime.Serialization.xml",
-        "build/.NETFramework/v4.6.1/System.Security.dll",
-        "build/.NETFramework/v4.6.1/System.Security.xml",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.Activation.dll",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.Activation.xml",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.Activities.dll",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.Activities.xml",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.Channels.dll",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.Channels.xml",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.Discovery.dll",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.Discovery.xml",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.Routing.dll",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.Routing.xml",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.Web.dll",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.Web.xml",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.dll",
-        "build/.NETFramework/v4.6.1/System.ServiceModel.xml",
-        "build/.NETFramework/v4.6.1/System.ServiceProcess.dll",
-        "build/.NETFramework/v4.6.1/System.ServiceProcess.xml",
-        "build/.NETFramework/v4.6.1/System.Speech.dll",
-        "build/.NETFramework/v4.6.1/System.Speech.xml",
-        "build/.NETFramework/v4.6.1/System.Threading.Tasks.Dataflow.xml",
-        "build/.NETFramework/v4.6.1/System.Transactions.dll",
-        "build/.NETFramework/v4.6.1/System.Transactions.xml",
-        "build/.NETFramework/v4.6.1/System.Web.Abstractions.dll",
-        "build/.NETFramework/v4.6.1/System.Web.ApplicationServices.dll",
-        "build/.NETFramework/v4.6.1/System.Web.ApplicationServices.xml",
-        "build/.NETFramework/v4.6.1/System.Web.DataVisualization.Design.dll",
-        "build/.NETFramework/v4.6.1/System.Web.DataVisualization.dll",
-        "build/.NETFramework/v4.6.1/System.Web.DataVisualization.xml",
-        "build/.NETFramework/v4.6.1/System.Web.DynamicData.Design.dll",
-        "build/.NETFramework/v4.6.1/System.Web.DynamicData.Design.xml",
-        "build/.NETFramework/v4.6.1/System.Web.DynamicData.dll",
-        "build/.NETFramework/v4.6.1/System.Web.DynamicData.xml",
-        "build/.NETFramework/v4.6.1/System.Web.Entity.Design.dll",
-        "build/.NETFramework/v4.6.1/System.Web.Entity.Design.xml",
-        "build/.NETFramework/v4.6.1/System.Web.Entity.dll",
-        "build/.NETFramework/v4.6.1/System.Web.Entity.xml",
-        "build/.NETFramework/v4.6.1/System.Web.Extensions.Design.dll",
-        "build/.NETFramework/v4.6.1/System.Web.Extensions.Design.xml",
-        "build/.NETFramework/v4.6.1/System.Web.Extensions.dll",
-        "build/.NETFramework/v4.6.1/System.Web.Extensions.xml",
-        "build/.NETFramework/v4.6.1/System.Web.Mobile.dll",
-        "build/.NETFramework/v4.6.1/System.Web.Mobile.xml",
-        "build/.NETFramework/v4.6.1/System.Web.RegularExpressions.dll",
-        "build/.NETFramework/v4.6.1/System.Web.RegularExpressions.xml",
-        "build/.NETFramework/v4.6.1/System.Web.Routing.dll",
-        "build/.NETFramework/v4.6.1/System.Web.Services.dll",
-        "build/.NETFramework/v4.6.1/System.Web.Services.xml",
-        "build/.NETFramework/v4.6.1/System.Web.dll",
-        "build/.NETFramework/v4.6.1/System.Web.xml",
-        "build/.NETFramework/v4.6.1/System.Windows.Controls.Ribbon.dll",
-        "build/.NETFramework/v4.6.1/System.Windows.Controls.Ribbon.xml",
-        "build/.NETFramework/v4.6.1/System.Windows.Forms.DataVisualization.Design.dll",
-        "build/.NETFramework/v4.6.1/System.Windows.Forms.DataVisualization.dll",
-        "build/.NETFramework/v4.6.1/System.Windows.Forms.DataVisualization.xml",
-        "build/.NETFramework/v4.6.1/System.Windows.Forms.dll",
-        "build/.NETFramework/v4.6.1/System.Windows.Forms.xml",
-        "build/.NETFramework/v4.6.1/System.Windows.Input.Manipulations.dll",
-        "build/.NETFramework/v4.6.1/System.Windows.Input.Manipulations.xml",
-        "build/.NETFramework/v4.6.1/System.Windows.Presentation.dll",
-        "build/.NETFramework/v4.6.1/System.Windows.Presentation.xml",
-        "build/.NETFramework/v4.6.1/System.Windows.dll",
-        "build/.NETFramework/v4.6.1/System.Workflow.Activities.dll",
-        "build/.NETFramework/v4.6.1/System.Workflow.Activities.xml",
-        "build/.NETFramework/v4.6.1/System.Workflow.ComponentModel.dll",
-        "build/.NETFramework/v4.6.1/System.Workflow.ComponentModel.xml",
-        "build/.NETFramework/v4.6.1/System.Workflow.Runtime.dll",
-        "build/.NETFramework/v4.6.1/System.Workflow.Runtime.xml",
-        "build/.NETFramework/v4.6.1/System.WorkflowServices.dll",
-        "build/.NETFramework/v4.6.1/System.WorkflowServices.xml",
-        "build/.NETFramework/v4.6.1/System.Xaml.dll",
-        "build/.NETFramework/v4.6.1/System.Xaml.xml",
-        "build/.NETFramework/v4.6.1/System.Xml.Linq.dll",
-        "build/.NETFramework/v4.6.1/System.Xml.Linq.xml",
-        "build/.NETFramework/v4.6.1/System.Xml.Serialization.dll",
-        "build/.NETFramework/v4.6.1/System.Xml.dll",
-        "build/.NETFramework/v4.6.1/System.Xml.xml",
-        "build/.NETFramework/v4.6.1/System.dll",
-        "build/.NETFramework/v4.6.1/System.xml",
-        "build/.NETFramework/v4.6.1/UIAutomationClient.dll",
-        "build/.NETFramework/v4.6.1/UIAutomationClient.xml",
-        "build/.NETFramework/v4.6.1/UIAutomationClientsideProviders.dll",
-        "build/.NETFramework/v4.6.1/UIAutomationClientsideProviders.xml",
-        "build/.NETFramework/v4.6.1/UIAutomationProvider.dll",
-        "build/.NETFramework/v4.6.1/UIAutomationProvider.xml",
-        "build/.NETFramework/v4.6.1/UIAutomationTypes.dll",
-        "build/.NETFramework/v4.6.1/UIAutomationTypes.xml",
-        "build/.NETFramework/v4.6.1/WindowsBase.dll",
-        "build/.NETFramework/v4.6.1/WindowsBase.xml",
-        "build/.NETFramework/v4.6.1/WindowsFormsIntegration.dll",
-        "build/.NETFramework/v4.6.1/WindowsFormsIntegration.xml",
-        "build/.NETFramework/v4.6.1/XamlBuildTask.dll",
-        "build/.NETFramework/v4.6.1/XamlBuildTask.xml",
-        "build/.NETFramework/v4.6.1/mscorlib.dll",
-        "build/.NETFramework/v4.6.1/mscorlib.xml",
-        "build/.NETFramework/v4.6.1/namespaces.xml",
-        "build/.NETFramework/v4.6.1/sysglobl.dll",
-        "build/.NETFramework/v4.6.1/sysglobl.xml",
-        "build/Microsoft.NETFramework.ReferenceAssemblies.net461.targets",
-        "microsoft.netframework.referenceassemblies.net461.1.0.3.nupkg.sha512",
-        "microsoft.netframework.referenceassemblies.net461.nuspec"
-      ]
-    },
     "Microsoft.OpenApi/1.2.3": {
       "sha512": "Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
       "type": "package",
@@ -1857,10 +1568,268 @@
         "microsoft.openapi.nuspec"
       ]
     },
-    "OpenTelemetry.Instrumentation.Runtime/1.5.1": {
-      "sha512": "F3uYt/T5+2YZCxZmAdoK7u5AZxqDLYaTj5ddZ//Cnn9x+Lys9D9wRzqizQgKpAQJJ6prVh0TcBEbCCpEKKDZvw==",
+    "OpenTelemetry/1.8.0": {
+      "sha512": "REAYqOj2KcLYdg7Xtj4xdx9bSqwNkUQMBl3jpqhQD1AX4qs+ip4Cd8fs7xUDRj7+7Sce2mRvBX4V8Fy0GHranA==",
       "type": "package",
-      "path": "opentelemetry.instrumentation.runtime/1.5.1",
+      "path": "opentelemetry/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/OpenTelemetry.dll",
+        "lib/net462/OpenTelemetry.xml",
+        "lib/net6.0/OpenTelemetry.dll",
+        "lib/net6.0/OpenTelemetry.xml",
+        "lib/net8.0/OpenTelemetry.dll",
+        "lib/net8.0/OpenTelemetry.xml",
+        "lib/netstandard2.0/OpenTelemetry.dll",
+        "lib/netstandard2.0/OpenTelemetry.xml",
+        "lib/netstandard2.1/OpenTelemetry.dll",
+        "lib/netstandard2.1/OpenTelemetry.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.1.8.0.nupkg.sha512",
+        "opentelemetry.nuspec"
+      ]
+    },
+    "OpenTelemetry.Api/1.8.0": {
+      "sha512": "+daN4OqIXne3QLlFHEzb6ybAETgKs7Hg5jINYT5P8p8A/cEtuP6CRDYdDpOe6AlW8oAaV/nJJ5tLyPUVKKQu0w==",
+      "type": "package",
+      "path": "opentelemetry.api/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/OpenTelemetry.Api.dll",
+        "lib/net462/OpenTelemetry.Api.xml",
+        "lib/net6.0/OpenTelemetry.Api.dll",
+        "lib/net6.0/OpenTelemetry.Api.xml",
+        "lib/net8.0/OpenTelemetry.Api.dll",
+        "lib/net8.0/OpenTelemetry.Api.xml",
+        "lib/netstandard2.0/OpenTelemetry.Api.dll",
+        "lib/netstandard2.0/OpenTelemetry.Api.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.api.1.8.0.nupkg.sha512",
+        "opentelemetry.api.nuspec"
+      ]
+    },
+    "OpenTelemetry.Api.ProviderBuilderExtensions/1.8.0": {
+      "sha512": "BLo2IwO+sJZMsedvKyMtDJL1Pk7gto2B5lf0rkGKigihUUYDaWwh7HTYtftTamXn0UthCB9B+VUaF7h9AohXMg==",
+      "type": "package",
+      "path": "opentelemetry.api.providerbuilderextensions/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/OpenTelemetry.Api.ProviderBuilderExtensions.dll",
+        "lib/net462/OpenTelemetry.Api.ProviderBuilderExtensions.xml",
+        "lib/net6.0/OpenTelemetry.Api.ProviderBuilderExtensions.dll",
+        "lib/net6.0/OpenTelemetry.Api.ProviderBuilderExtensions.xml",
+        "lib/net8.0/OpenTelemetry.Api.ProviderBuilderExtensions.dll",
+        "lib/net8.0/OpenTelemetry.Api.ProviderBuilderExtensions.xml",
+        "lib/netstandard2.0/OpenTelemetry.Api.ProviderBuilderExtensions.dll",
+        "lib/netstandard2.0/OpenTelemetry.Api.ProviderBuilderExtensions.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.api.providerbuilderextensions.1.8.0.nupkg.sha512",
+        "opentelemetry.api.providerbuilderextensions.nuspec"
+      ]
+    },
+    "OpenTelemetry.Exporter.Console/1.8.0": {
+      "sha512": "WCswvEenmbpWTK3NvmWkDGjnocMpoj3eXJ64QcrJM2Ss1ZCRFBqA9XITSlWhFrFCiCA0rlcZKJo8joLXPbn0xg==",
+      "type": "package",
+      "path": "opentelemetry.exporter.console/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/OpenTelemetry.Exporter.Console.dll",
+        "lib/net462/OpenTelemetry.Exporter.Console.xml",
+        "lib/net6.0/OpenTelemetry.Exporter.Console.dll",
+        "lib/net6.0/OpenTelemetry.Exporter.Console.xml",
+        "lib/net8.0/OpenTelemetry.Exporter.Console.dll",
+        "lib/net8.0/OpenTelemetry.Exporter.Console.xml",
+        "lib/netstandard2.0/OpenTelemetry.Exporter.Console.dll",
+        "lib/netstandard2.0/OpenTelemetry.Exporter.Console.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.exporter.console.1.8.0.nupkg.sha512",
+        "opentelemetry.exporter.console.nuspec"
+      ]
+    },
+    "OpenTelemetry.Exporter.Jaeger/1.6.0-rc.1": {
+      "sha512": "H7bJkiBhub4cu7WLXrYUdCqszvlaAWA5AYGmi0m4c+AeSEEQGC4e0ywpEdLlbk7f2eSc7eHYY5wJLER4twghpw==",
+      "type": "package",
+      "path": "opentelemetry.exporter.jaeger/1.6.0-rc.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/OpenTelemetry.Exporter.Jaeger.dll",
+        "lib/net462/OpenTelemetry.Exporter.Jaeger.xml",
+        "lib/net6.0/OpenTelemetry.Exporter.Jaeger.dll",
+        "lib/net6.0/OpenTelemetry.Exporter.Jaeger.xml",
+        "lib/netstandard2.0/OpenTelemetry.Exporter.Jaeger.dll",
+        "lib/netstandard2.0/OpenTelemetry.Exporter.Jaeger.xml",
+        "lib/netstandard2.1/OpenTelemetry.Exporter.Jaeger.dll",
+        "lib/netstandard2.1/OpenTelemetry.Exporter.Jaeger.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.exporter.jaeger.1.6.0-rc.1.nupkg.sha512",
+        "opentelemetry.exporter.jaeger.nuspec"
+      ]
+    },
+    "OpenTelemetry.Exporter.OpenTelemetryProtocol/1.8.0": {
+      "sha512": "7YWlaLkGGyZmCi116MJW/tHBYAZObDJ3+rtOvQrHnIhOI6KDEdWez9R+ShtH/9RtkD/bjt/6EVQnUeDilNE5AA==",
+      "type": "package",
+      "path": "opentelemetry.exporter.opentelemetryprotocol/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/OpenTelemetry.Exporter.OpenTelemetryProtocol.dll",
+        "lib/net462/OpenTelemetry.Exporter.OpenTelemetryProtocol.xml",
+        "lib/net6.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.dll",
+        "lib/net6.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.xml",
+        "lib/net8.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.dll",
+        "lib/net8.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.xml",
+        "lib/netstandard2.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.dll",
+        "lib/netstandard2.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.xml",
+        "lib/netstandard2.1/OpenTelemetry.Exporter.OpenTelemetryProtocol.dll",
+        "lib/netstandard2.1/OpenTelemetry.Exporter.OpenTelemetryProtocol.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.exporter.opentelemetryprotocol.1.8.0.nupkg.sha512",
+        "opentelemetry.exporter.opentelemetryprotocol.nuspec"
+      ]
+    },
+    "OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs/1.5.0-rc.1": {
+      "sha512": "WkaGxZOkJcfQOoArQg3uNuDphaBwRBQW06+dAhCH7mVVCGVlIdW7XqK6jgXYu4Q6QStk144rSpVj7WKACUthWA==",
+      "type": "package",
+      "path": "opentelemetry.exporter.opentelemetryprotocol.logs/1.5.0-rc.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.dll",
+        "lib/net462/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.xml",
+        "lib/netstandard2.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.dll",
+        "lib/netstandard2.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.xml",
+        "lib/netstandard2.1/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.dll",
+        "lib/netstandard2.1/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.exporter.opentelemetryprotocol.logs.1.5.0-rc.1.nupkg.sha512",
+        "opentelemetry.exporter.opentelemetryprotocol.logs.nuspec"
+      ]
+    },
+    "OpenTelemetry.Exporter.Prometheus.AspNetCore/1.8.0-rc.1": {
+      "sha512": "CPNRGYw8uTemqprcieBtrysTB46IJbnRr5DowSLrFU23mgdqmmkNLttVjzXJsiZzd/IXrwqd5Vq4JiOUnibjAw==",
+      "type": "package",
+      "path": "opentelemetry.exporter.prometheus.aspnetcore/1.8.0-rc.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/OpenTelemetry.Exporter.Prometheus.AspNetCore.dll",
+        "lib/net6.0/OpenTelemetry.Exporter.Prometheus.AspNetCore.xml",
+        "lib/net8.0/OpenTelemetry.Exporter.Prometheus.AspNetCore.dll",
+        "lib/net8.0/OpenTelemetry.Exporter.Prometheus.AspNetCore.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.exporter.prometheus.aspnetcore.1.8.0-rc.1.nupkg.sha512",
+        "opentelemetry.exporter.prometheus.aspnetcore.nuspec"
+      ]
+    },
+    "OpenTelemetry.Exporter.Zipkin/1.8.0": {
+      "sha512": "Vfd/IBcnRBWciEdRVgMARA4W9aiL4pItryQD7Jl8HYCteEntruc/g/tY5mzL3c+B3HE8WrXVE0SgdcoFeI1xkA==",
+      "type": "package",
+      "path": "opentelemetry.exporter.zipkin/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/OpenTelemetry.Exporter.Zipkin.dll",
+        "lib/net462/OpenTelemetry.Exporter.Zipkin.xml",
+        "lib/net6.0/OpenTelemetry.Exporter.Zipkin.dll",
+        "lib/net6.0/OpenTelemetry.Exporter.Zipkin.xml",
+        "lib/net8.0/OpenTelemetry.Exporter.Zipkin.dll",
+        "lib/net8.0/OpenTelemetry.Exporter.Zipkin.xml",
+        "lib/netstandard2.0/OpenTelemetry.Exporter.Zipkin.dll",
+        "lib/netstandard2.0/OpenTelemetry.Exporter.Zipkin.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.exporter.zipkin.1.8.0.nupkg.sha512",
+        "opentelemetry.exporter.zipkin.nuspec"
+      ]
+    },
+    "OpenTelemetry.Extensions.Hosting/1.8.0": {
+      "sha512": "mJXRMgd7ZoFLuKc2rUlmGNRbbTk6ayQuPJhJy/rktdTZN3lY3wpTRhKPvZNSlKgftx9w039/ORoCUIXmpcgAVQ==",
+      "type": "package",
+      "path": "opentelemetry.extensions.hosting/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/OpenTelemetry.Extensions.Hosting.dll",
+        "lib/net462/OpenTelemetry.Extensions.Hosting.xml",
+        "lib/net6.0/OpenTelemetry.Extensions.Hosting.dll",
+        "lib/net6.0/OpenTelemetry.Extensions.Hosting.xml",
+        "lib/net8.0/OpenTelemetry.Extensions.Hosting.dll",
+        "lib/net8.0/OpenTelemetry.Extensions.Hosting.xml",
+        "lib/netstandard2.0/OpenTelemetry.Extensions.Hosting.dll",
+        "lib/netstandard2.0/OpenTelemetry.Extensions.Hosting.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.extensions.hosting.1.8.0.nupkg.sha512",
+        "opentelemetry.extensions.hosting.nuspec"
+      ]
+    },
+    "OpenTelemetry.Instrumentation.AspNetCore/1.8.0": {
+      "sha512": "ywEkIpDZpA9p4kdmji/Tt6SdkXDrXFQjm+rGxGEWUYR/JmGptWEPjWHfXzKfL+3nqkS64CUF53knLpf2rPCWBA==",
+      "type": "package",
+      "path": "opentelemetry.instrumentation.aspnetcore/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/OpenTelemetry.Instrumentation.AspNetCore.dll",
+        "lib/net6.0/OpenTelemetry.Instrumentation.AspNetCore.xml",
+        "lib/net7.0/OpenTelemetry.Instrumentation.AspNetCore.dll",
+        "lib/net7.0/OpenTelemetry.Instrumentation.AspNetCore.xml",
+        "lib/net8.0/OpenTelemetry.Instrumentation.AspNetCore.dll",
+        "lib/net8.0/OpenTelemetry.Instrumentation.AspNetCore.xml",
+        "lib/netstandard2.0/OpenTelemetry.Instrumentation.AspNetCore.dll",
+        "lib/netstandard2.0/OpenTelemetry.Instrumentation.AspNetCore.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.instrumentation.aspnetcore.1.8.0.nupkg.sha512",
+        "opentelemetry.instrumentation.aspnetcore.nuspec"
+      ]
+    },
+    "OpenTelemetry.Instrumentation.Http/1.8.0": {
+      "sha512": "jv2//suDd7tLW9uNuL4KTK68kGjN/HjEs6FahmiLVcXdnCzpYo2mPvikRBq1twB3ktfWQEyVWYT6G6FVwvZtIQ==",
+      "type": "package",
+      "path": "opentelemetry.instrumentation.http/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/OpenTelemetry.Instrumentation.Http.dll",
+        "lib/net462/OpenTelemetry.Instrumentation.Http.xml",
+        "lib/net6.0/OpenTelemetry.Instrumentation.Http.dll",
+        "lib/net6.0/OpenTelemetry.Instrumentation.Http.xml",
+        "lib/net8.0/OpenTelemetry.Instrumentation.Http.dll",
+        "lib/net8.0/OpenTelemetry.Instrumentation.Http.xml",
+        "lib/netstandard2.0/OpenTelemetry.Instrumentation.Http.dll",
+        "lib/netstandard2.0/OpenTelemetry.Instrumentation.Http.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.instrumentation.http.1.8.0.nupkg.sha512",
+        "opentelemetry.instrumentation.http.nuspec"
+      ]
+    },
+    "OpenTelemetry.Instrumentation.Runtime/1.5.0": {
+      "sha512": "t7HClhnf/7bXeEK+6mXRaibUUgP+LVmNLBo+MaCfHmX1yEOIEuTg2jcvw6PrxkjJxAqmzyKIRNIqiH77R5xQVA==",
+      "type": "package",
+      "path": "opentelemetry.instrumentation.runtime/1.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1871,47 +1840,8 @@
         "lib/netstandard2.0/OpenTelemetry.Instrumentation.Runtime.dll",
         "lib/netstandard2.0/OpenTelemetry.Instrumentation.Runtime.xml",
         "opentelemetry-icon-color.png",
-        "opentelemetry.instrumentation.runtime.1.5.1.nupkg.sha512",
+        "opentelemetry.instrumentation.runtime.1.5.0.nupkg.sha512",
         "opentelemetry.instrumentation.runtime.nuspec"
-      ]
-    },
-    "StyleCop.Analyzers/1.2.0-beta.556": {
-      "sha512": "llRPgmA1fhC0I0QyFLEcjvtM2239QzKr/tcnbsjArLMJxJlu0AA5G7Fft0OI30pHF3MW63Gf4aSSsjc5m82J1Q==",
-      "type": "package",
-      "path": "stylecop.analyzers/1.2.0-beta.556",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "THIRD-PARTY-NOTICES.txt",
-        "stylecop.analyzers.1.2.0-beta.556.nupkg.sha512",
-        "stylecop.analyzers.nuspec"
-      ]
-    },
-    "StyleCop.Analyzers.Unstable/1.2.0.556": {
-      "sha512": "zvn9Mqs/ox/83cpYPignI8hJEM2A93s2HkHs8HYMOAQW0PkampyoErAiIyKxgTLqbbad29HX/shv/6LGSjPJNQ==",
-      "type": "package",
-      "path": "stylecop.analyzers.unstable/1.2.0.556",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "THIRD-PARTY-NOTICES.txt",
-        "analyzers/dotnet/cs/StyleCop.Analyzers.CodeFixes.dll",
-        "analyzers/dotnet/cs/StyleCop.Analyzers.dll",
-        "analyzers/dotnet/cs/de-DE/StyleCop.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/en-GB/StyleCop.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/es-MX/StyleCop.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/fr-FR/StyleCop.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/pl-PL/StyleCop.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/pt-BR/StyleCop.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/ru-RU/StyleCop.Analyzers.resources.dll",
-        "rulesets/StyleCopAnalyzersDefault.ruleset",
-        "stylecop.analyzers.unstable.1.2.0.556.nupkg.sha512",
-        "stylecop.analyzers.unstable.nuspec",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
       ]
     },
     "Swashbuckle.AspNetCore/6.5.0": {
@@ -2100,69 +2030,58 @@
         "version.txt"
       ]
     },
-    "OpenTelemetry/1.0.0": {
-      "type": "project",
-      "path": "../../src/OpenTelemetry/OpenTelemetry.csproj",
-      "msbuildProject": "../../src/OpenTelemetry/OpenTelemetry.csproj"
-    },
-    "OpenTelemetry.Api/1.0.0": {
-      "type": "project",
-      "path": "../../src/OpenTelemetry.Api/OpenTelemetry.Api.csproj",
-      "msbuildProject": "../../src/OpenTelemetry.Api/OpenTelemetry.Api.csproj"
-    },
-    "OpenTelemetry.Api.ProviderBuilderExtensions/1.0.0": {
-      "type": "project",
-      "path": "../../src/OpenTelemetry.Api.ProviderBuilderExtensions/OpenTelemetry.Api.ProviderBuilderExtensions.csproj",
-      "msbuildProject": "../../src/OpenTelemetry.Api.ProviderBuilderExtensions/OpenTelemetry.Api.ProviderBuilderExtensions.csproj"
-    },
-    "OpenTelemetry.Exporter.Console/1.0.0": {
-      "type": "project",
-      "path": "../../src/OpenTelemetry.Exporter.Console/OpenTelemetry.Exporter.Console.csproj",
-      "msbuildProject": "../../src/OpenTelemetry.Exporter.Console/OpenTelemetry.Exporter.Console.csproj"
-    },
-    "OpenTelemetry.Exporter.OpenTelemetryProtocol/1.0.0": {
-      "type": "project",
-      "path": "../../src/OpenTelemetry.Exporter.OpenTelemetryProtocol/OpenTelemetry.Exporter.OpenTelemetryProtocol.csproj",
-      "msbuildProject": "../../src/OpenTelemetry.Exporter.OpenTelemetryProtocol/OpenTelemetry.Exporter.OpenTelemetryProtocol.csproj"
-    },
-    "OpenTelemetry.Exporter.Prometheus.AspNetCore/1.0.0": {
-      "type": "project",
-      "path": "../../src/OpenTelemetry.Exporter.Prometheus.AspNetCore/OpenTelemetry.Exporter.Prometheus.AspNetCore.csproj",
-      "msbuildProject": "../../src/OpenTelemetry.Exporter.Prometheus.AspNetCore/OpenTelemetry.Exporter.Prometheus.AspNetCore.csproj"
-    },
-    "OpenTelemetry.Exporter.Zipkin/1.0.0": {
-      "type": "project",
-      "path": "../../src/OpenTelemetry.Exporter.Zipkin/OpenTelemetry.Exporter.Zipkin.csproj",
-      "msbuildProject": "../../src/OpenTelemetry.Exporter.Zipkin/OpenTelemetry.Exporter.Zipkin.csproj"
-    },
-    "OpenTelemetry.Extensions.Hosting/1.0.0": {
-      "type": "project",
-      "path": "../../src/OpenTelemetry.Extensions.Hosting/OpenTelemetry.Extensions.Hosting.csproj",
-      "msbuildProject": "../../src/OpenTelemetry.Extensions.Hosting/OpenTelemetry.Extensions.Hosting.csproj"
-    },
-    "OpenTelemetry.Instrumentation.AspNetCore/1.0.0": {
-      "type": "project",
-      "path": "../../src/OpenTelemetry.Instrumentation.AspNetCore/OpenTelemetry.Instrumentation.AspNetCore.csproj",
-      "msbuildProject": "../../src/OpenTelemetry.Instrumentation.AspNetCore/OpenTelemetry.Instrumentation.AspNetCore.csproj"
-    },
-    "OpenTelemetry.Instrumentation.Http/1.0.0": {
-      "type": "project",
-      "path": "../../src/OpenTelemetry.Instrumentation.Http/OpenTelemetry.Instrumentation.Http.csproj",
-      "msbuildProject": "../../src/OpenTelemetry.Instrumentation.Http/OpenTelemetry.Instrumentation.Http.csproj"
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.3 < 2.0.0",
-      "OpenTelemetry.Exporter.Console >= 1.0.0",
-      "OpenTelemetry.Exporter.OpenTelemetryProtocol >= 1.0.0",
-      "OpenTelemetry.Exporter.Prometheus.AspNetCore >= 1.0.0",
-      "OpenTelemetry.Exporter.Zipkin >= 1.0.0",
-      "OpenTelemetry.Extensions.Hosting >= 1.0.0",
-      "OpenTelemetry.Instrumentation.AspNetCore >= 1.0.0",
-      "OpenTelemetry.Instrumentation.Http >= 1.0.0",
-      "OpenTelemetry.Instrumentation.Runtime >= 1.5.1 < 2.0.0",
-      "StyleCop.Analyzers >= 1.2.0-beta.556 < 2.0.0",
+      "OpenTelemetry >= 1.8.0",
+      "OpenTelemetry.Api >= 1.8.0",
+      "OpenTelemetry.Exporter.Console >= 1.8.0",
+      "OpenTelemetry.Exporter.Jaeger >= 1.6.0-rc.1",
+      "OpenTelemetry.Exporter.OpenTelemetryProtocol >= 1.8.0",
+      "OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs >= 1.5.0-rc.1",
+      "OpenTelemetry.Exporter.Prometheus.AspNetCore >= 1.8.0-rc.1",
+      "OpenTelemetry.Exporter.Zipkin >= 1.8.0",
+      "OpenTelemetry.Extensions.Hosting >= 1.8.0",
+      "OpenTelemetry.Instrumentation.AspNetCore >= 1.8.0",
+      "OpenTelemetry.Instrumentation.Http >= 1.8.0",
+      "OpenTelemetry.Instrumentation.Runtime >= 1.5.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -2179,12 +2098,10 @@
       "packagesPath": "C:\\Users\\socarpenter\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\examples\\AspNetCore\\obj\\",
       "projectStyle": "PackageReference",
-      "centralPackageVersionsManagementEnabled": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\NuGet.Config",
         "C:\\Users\\socarpenter\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -2193,35 +2110,13 @@
         "net8.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {},
-        "https://dnceng.pkgs.visualstudio.com/public/_packaging/dotnet8/nuget/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {
-            "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Exporter.Console\\OpenTelemetry.Exporter.Console.csproj": {
-              "projectPath": "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Exporter.Console\\OpenTelemetry.Exporter.Console.csproj"
-            },
-            "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Exporter.OpenTelemetryProtocol\\OpenTelemetry.Exporter.OpenTelemetryProtocol.csproj": {
-              "projectPath": "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Exporter.OpenTelemetryProtocol\\OpenTelemetry.Exporter.OpenTelemetryProtocol.csproj"
-            },
-            "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Exporter.Prometheus.AspNetCore\\OpenTelemetry.Exporter.Prometheus.AspNetCore.csproj": {
-              "projectPath": "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Exporter.Prometheus.AspNetCore\\OpenTelemetry.Exporter.Prometheus.AspNetCore.csproj"
-            },
-            "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Exporter.Zipkin\\OpenTelemetry.Exporter.Zipkin.csproj": {
-              "projectPath": "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Exporter.Zipkin\\OpenTelemetry.Exporter.Zipkin.csproj"
-            },
-            "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Extensions.Hosting\\OpenTelemetry.Extensions.Hosting.csproj": {
-              "projectPath": "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Extensions.Hosting\\OpenTelemetry.Extensions.Hosting.csproj"
-            },
-            "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Instrumentation.AspNetCore\\OpenTelemetry.Instrumentation.AspNetCore.csproj": {
-              "projectPath": "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Instrumentation.AspNetCore\\OpenTelemetry.Instrumentation.AspNetCore.csproj"
-            },
-            "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Instrumentation.Http\\OpenTelemetry.Instrumentation.Http.csproj": {
-              "projectPath": "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\src\\OpenTelemetry.Instrumentation.Http\\OpenTelemetry.Instrumentation.Http.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -2239,82 +2134,58 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
-          "Microsoft.NETFramework.ReferenceAssemblies": {
-            "suppressParent": "All",
+          "OpenTelemetry": {
             "target": "Package",
-            "version": "[1.0.3, 2.0.0)",
-            "versionCentrallyManaged": true
+            "version": "[1.8.0, )"
+          },
+          "OpenTelemetry.Api": {
+            "target": "Package",
+            "version": "[1.8.0, )"
+          },
+          "OpenTelemetry.Exporter.Console": {
+            "target": "Package",
+            "version": "[1.8.0, )"
+          },
+          "OpenTelemetry.Exporter.Jaeger": {
+            "target": "Package",
+            "version": "[1.6.0-rc.1, )"
+          },
+          "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
+            "target": "Package",
+            "version": "[1.8.0, )"
+          },
+          "OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs": {
+            "target": "Package",
+            "version": "[1.5.0-rc.1, )"
+          },
+          "OpenTelemetry.Exporter.Prometheus.AspNetCore": {
+            "target": "Package",
+            "version": "[1.8.0-rc.1, )"
+          },
+          "OpenTelemetry.Exporter.Zipkin": {
+            "target": "Package",
+            "version": "[1.8.0, )"
+          },
+          "OpenTelemetry.Extensions.Hosting": {
+            "target": "Package",
+            "version": "[1.8.0, )"
+          },
+          "OpenTelemetry.Instrumentation.AspNetCore": {
+            "target": "Package",
+            "version": "[1.8.0, )"
+          },
+          "OpenTelemetry.Instrumentation.Http": {
+            "target": "Package",
+            "version": "[1.8.0, )"
           },
           "OpenTelemetry.Instrumentation.Runtime": {
             "target": "Package",
-            "version": "[1.5.1, 2.0.0)",
-            "versionCentrallyManaged": true
-          },
-          "StyleCop.Analyzers": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[1.2.0-beta.556, 2.0.0)",
-            "versionCentrallyManaged": true
+            "version": "[1.5.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
-            "version": "[6.5.0, )",
-            "versionCentrallyManaged": true
+            "version": "[6.5.0, )"
           }
-        },
-        "centralPackageVersions": {
-          "BenchmarkDotNet": "[0.13.10, 0.14.0)",
-          "CommandLineParser": "[2.9.1, 3.0.0)",
-          "Google.Protobuf": "[3.22.5, 4.0.0)",
-          "Grpc": "[2.44.0, 3.0.0)",
-          "Grpc.AspNetCore": "[2.59.0, 3.0.0)",
-          "Grpc.AspNetCore.Server": "[2.59.0, 3.0.0)",
-          "Grpc.Net.Client": "[2.52.0, 3.0.0)",
-          "Grpc.Tools": "[2.59.0, 3.0.0)",
-          "Microsoft.AspNetCore.Http.Abstractions": "[2.1.1, 6.0.0)",
-          "Microsoft.AspNetCore.Http.Features": "[2.1.1, 6.0.0)",
-          "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "[8.0.0, )",
-          "Microsoft.AspNetCore.Mvc.Testing": "[8.0.0, )",
-          "Microsoft.AspNetCore.TestHost": "[8.0.0, )",
-          "Microsoft.CodeAnalysis.PublicApiAnalyzers": "[3.11.0-beta1.23525.2, 3.11.0-beta1.23525.2]",
-          "Microsoft.CSharp": "[4.7.0, 4.7.0]",
-          "Microsoft.Data.SqlClient": "[5.1.3, )",
-          "Microsoft.Extensions.Configuration": "[8.0.0, )",
-          "Microsoft.Extensions.Configuration.Binder": "[8.0.1, )",
-          "Microsoft.Extensions.DependencyInjection": "[8.0.0, )",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "[8.0.0, )",
-          "Microsoft.Extensions.Diagnostics.Abstractions": "[8.0.0, )",
-          "Microsoft.Extensions.Hosting": "[8.0.0, )",
-          "Microsoft.Extensions.Hosting.Abstractions": "[8.0.0, )",
-          "Microsoft.Extensions.Http": "[8.0.0, )",
-          "Microsoft.Extensions.Logging": "[8.0.0, )",
-          "Microsoft.Extensions.Logging.Abstractions": "[8.0.0, )",
-          "Microsoft.Extensions.Logging.Configuration": "[8.0.0, )",
-          "Microsoft.Extensions.Options": "[8.0.0, )",
-          "Microsoft.Extensions.Telemetry.Abstractions": "[8.2.0, )",
-          "Microsoft.NET.Test.Sdk": "[17.8.0, 18.0.0)",
-          "Microsoft.NETFramework.ReferenceAssemblies": "[1.0.3, 2.0.0)",
-          "Microsoft.SourceLink.GitHub": "[1.1.1, 2.0.0)",
-          "MinVer": "[5.0.0, 6.0.0)",
-          "OpenTelemetry": "[1.8.0, )",
-          "OpenTelemetry.Api": "[1.8.0, )",
-          "OpenTelemetry.Api.ProviderBuilderExtensions": "[1.8.0, )",
-          "OpenTelemetry.Exporter.InMemory": "[1.8.0, )",
-          "OpenTelemetry.Extensions.Hosting": "[1.8.0, )",
-          "OpenTelemetry.Extensions.Propagators": "[1.8.0, )",
-          "OpenTelemetry.Instrumentation.Runtime": "[1.5.1, 2.0.0)",
-          "OpenTracing": "[0.12.1, 0.13.0)",
-          "RabbitMQ.Client": "[6.6.0, 7.0.0)",
-          "StyleCop.Analyzers": "[1.2.0-beta.556, 2.0.0)",
-          "Swashbuckle.AspNetCore": "[6.5.0, )",
-          "System.Diagnostics.DiagnosticSource": "[8.0.0, )",
-          "System.Text.Encodings.Web": "[4.7.2, )",
-          "System.Text.Json": "[6.0.5, )",
-          "System.Threading.Tasks.Extensions": "[4.5.4, )",
-          "Testcontainers.MsSql": "[3.6.0, )",
-          "Testcontainers.SqlEdge": "[3.6.0, )",
-          "xunit": "[2.6.2, 3.0.0)",
-          "xunit.runner.visualstudio": "[2.5.4, 3.0.0)"
         },
         "imports": [
           "net461",

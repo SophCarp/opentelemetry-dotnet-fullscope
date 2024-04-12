@@ -4,13 +4,24 @@
 using System;
 using System.Diagnostics.Metrics;
 using Examples.AspNetCore;
-using OpenTelemetry.Exporter;
-using OpenTelemetry.Instrumentation.AspNetCore;
+// using OpenTelemetry.Exporter;
+// using OpenTelemetry.Instrumentation.AspNetCore;
+// using OpenTelemetry.Logs;
+// using OpenTelemetry.Metrics;
+// using OpenTelemetry.Resources;
+// using OpenTelemetry.Trace;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Hosting;
 using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
-using Microsoft.AspNetCore.Builder;
+using OpenTelemetry.Exporter;
+using OpenTelemetry.Instrumentation.AspNetCore;
+// using OpenTelemetry.Logs;
 
 var appBuilder = WebApplication.CreateBuilder(args);
 
@@ -141,13 +152,13 @@ appBuilder.Logging.AddOpenTelemetry(options =>
 
     switch (logExporter)
     {
-        case "otlp":
-            options.AddOtlpExporter(otlpOptions =>
-            {
-                // Use IConfiguration directly for Otlp exporter endpoint option.
-                otlpOptions.Endpoint = new Uri(appBuilder.Configuration.GetValue("Otlp:Endpoint", defaultValue: "http://localhost:4317")!);
-            });
-            break;
+        // case "otlp":
+        //     options.AddOtlpExporter(otlpOptions =>
+        //     {
+        //         // Use IConfiguration directly for Otlp exporter endpoint option.
+        //         otlpOptions.Endpoint = new Uri(appBuilder.Configuration.GetValue("Otlp:Endpoint", defaultValue: "http://localhost:4317")!);
+        //     });
+        //     break;
         default:
             options.AddConsoleExporter();
             break;

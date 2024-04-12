@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "N4yVMMN/CKLGWdgErlLxXpl8GHHT4X2qbuDHfAh256fuMsvawqv8PmhNwgcg6ds/9jtqPW8goh9yBTSWkIQvBg==",
+  "dgSpecHash": "oUl5YxdX5jEF+wCthI29j8AtNItZzZ+zClyBCzQRMWOpVfvRQYteqJJneX7T04pSjmkTAGuMSG5gPbY3DrK+iw==",
   "success": true,
   "projectFilePath": "C:\\Users\\socarpenter\\testing\\2024-otel-blank-source\\opentelemetry-dotnet-fullscope\\examples\\AspNetCore\\Examples.AspNetCore.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,7 @@
     "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.1\\microsoft.extensions.configuration.binder.8.0.1.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\8.0.0\\microsoft.extensions.diagnostics.abstractions.8.0.0.nupkg.sha512",
@@ -23,12 +23,20 @@
     "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\8.0.0\\microsoft.extensions.options.configurationextensions.8.0.0.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
-    "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
-    "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net461\\1.0.3\\microsoft.netframework.referenceassemblies.net461.1.0.3.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry.instrumentation.runtime\\1.5.1\\opentelemetry.instrumentation.runtime.1.5.1.nupkg.sha512",
-    "C:\\Users\\socarpenter\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.556\\stylecop.analyzers.1.2.0-beta.556.nupkg.sha512",
-    "C:\\Users\\socarpenter\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.556\\stylecop.analyzers.unstable.1.2.0.556.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry\\1.8.0\\opentelemetry.1.8.0.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry.api\\1.8.0\\opentelemetry.api.1.8.0.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry.api.providerbuilderextensions\\1.8.0\\opentelemetry.api.providerbuilderextensions.1.8.0.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry.exporter.console\\1.8.0\\opentelemetry.exporter.console.1.8.0.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry.exporter.jaeger\\1.6.0-rc.1\\opentelemetry.exporter.jaeger.1.6.0-rc.1.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry.exporter.opentelemetryprotocol\\1.8.0\\opentelemetry.exporter.opentelemetryprotocol.1.8.0.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry.exporter.opentelemetryprotocol.logs\\1.5.0-rc.1\\opentelemetry.exporter.opentelemetryprotocol.logs.1.5.0-rc.1.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry.exporter.prometheus.aspnetcore\\1.8.0-rc.1\\opentelemetry.exporter.prometheus.aspnetcore.1.8.0-rc.1.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry.exporter.zipkin\\1.8.0\\opentelemetry.exporter.zipkin.1.8.0.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry.extensions.hosting\\1.8.0\\opentelemetry.extensions.hosting.1.8.0.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry.instrumentation.aspnetcore\\1.8.0\\opentelemetry.instrumentation.aspnetcore.1.8.0.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry.instrumentation.http\\1.8.0\\opentelemetry.instrumentation.http.1.8.0.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\opentelemetry.instrumentation.runtime\\1.5.0\\opentelemetry.instrumentation.runtime.1.5.0.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
@@ -36,7 +44,8 @@
     "C:\\Users\\socarpenter\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.0\\system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
-    "C:\\Users\\socarpenter\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+    "C:\\Users\\socarpenter\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }
