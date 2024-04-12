@@ -2,6 +2,33 @@
 
 ## Unreleased
 
+* Fixed an issue in Logging where unwanted objects (processors, exporters, etc.)
+  could be created inside delegates automatically executed by the Options API
+  during configuration reload.
+  ([#5514](https://github.com/open-telemetry/opentelemetry-dotnet/pull/5514))
+
+## 1.8.0
+
+Released 2024-Apr-02
+
+## 1.8.0-rc.1
+
+Released 2024-Mar-27
+
+* `TracerProvider`s can now have a sampler configured via the
+  `OTEL_TRACES_SAMPLER` environment variable. The supported values are:
+  `always_off`, `always_on`, `traceidratio`, `parentbased_always_on`,
+  `parentbased_always_off`, and `parentbased_traceidratio`. The options
+  `traceidratio` and `parentbased_traceidratio` may have the sampler probability
+  configured via the `OTEL_TRACES_SAMPLER_ARG` environment variable.
+  For details see: [OpenTelemetry Environment Variable
+  Specification](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/configuration/sdk-environment-variables.md#general-sdk-configuration).
+  ([#5448](https://github.com/open-telemetry/opentelemetry-dotnet/pull/5448))
+
+## 1.8.0-beta.1
+
+Released 2024-Mar-14
+
 * Throw NotSupportedException when using `SetErrorStatusOnException` method for
   Tracing in Mono Runtime and Native AOT environment because the dependent
   `Marshal.GetExceptionPointers()` API is not supported on these platforms.
