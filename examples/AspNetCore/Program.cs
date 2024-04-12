@@ -1,6 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
+using System;
 using System.Diagnostics.Metrics;
 using Examples.AspNetCore;
 using OpenTelemetry.Exporter;
@@ -9,6 +10,7 @@ using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
+using Microsoft.AspNetCore.Builder;
 
 var appBuilder = WebApplication.CreateBuilder(args);
 

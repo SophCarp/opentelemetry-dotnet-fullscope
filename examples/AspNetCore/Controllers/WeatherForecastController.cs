@@ -3,9 +3,14 @@
 
 namespace Examples.AspNetCore.Controllers;
 
+using System;
+using System.Linq;
+using System.Net.Http;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
+using System.Collections.Generic;
 using Examples.AspNetCore;
+using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
